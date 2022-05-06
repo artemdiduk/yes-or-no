@@ -368,19 +368,34 @@ h1 {
     padding: 0 10px;
 }
 .random {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100vh;
 }
 .random__title {
     text-align: center;
 }
 .random__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
 }
 .result__result {
@@ -389,7 +404,9 @@ h1 {
     top: 45%;
     font-size: 20px;
     color: #fff;
-    transform: translate(-50%, -50%);
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .random__img {
     height: 100%;
@@ -403,9 +420,15 @@ h1 {
     font-family: 'Tapestry', cursive;
     font-weight: 400;
     font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
@@ -419,8 +442,30 @@ h1 {
 }
 
 .random__img.active {
-    animation: 0.3s tremor ease-out;    
-    animation-iteration-count: 1;
+    -webkit-animation: 0.35s tremor ease-out;
+            animation: 0.35s tremor ease-out;    
+    -webkit-animation-iteration-count: 1;    
+            animation-iteration-count: 1;
+}
+
+
+@-webkit-keyframes tremor {
+    0%, 25% {
+        left: -5px;
+        -webkit-transform: translateX(-9%);
+        transform: translateX(-9%);
+    }
+    50% {
+        left: 5px;
+        -webkit-transform: translateX(9%);
+        transform: translateX(9%);
+       
+    } 
+    100% {
+        left: 0px;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
 }
 
 
