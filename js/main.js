@@ -18,4 +18,3 @@ btn.addEventListener('click', ()=> {
     },350)
 })
 
-console.log(('sss'));
