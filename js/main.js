@@ -17,3 +17,5 @@ btn.addEventListener('click', ()=> {
     img.classList.remove('active');
     },350)
 })
+
+console.log(('sss'));
